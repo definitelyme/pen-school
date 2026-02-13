@@ -1,0 +1,183 @@
+<script setup>
+import { useScrollReveal } from '../composables/useScrollReveal'
+import PageHero from '../components/shared/PageHero.vue'
+import SectionHeading from '../components/ui/SectionHeading.vue'
+import BaseCard from '../components/ui/BaseCard.vue'
+import { Target, Eye, Heart, BookOpen, Users, Award } from 'lucide-vue-next'
+
+const { elementRef: storyRef, isVisible: storyVisible } = useScrollReveal()
+const { elementRef: valuesRef, isVisible: valuesVisible } = useScrollReveal()
+
+const coreValues = [
+  { icon: BookOpen, title: 'Excellence', description: 'We strive for the highest standards in everything we do' },
+  { icon: Heart, title: 'Integrity', description: 'Honesty and strong moral principles guide our actions' },
+  { icon: Users, title: 'Respect', description: 'We value every individual and embrace diversity' },
+  { icon: Award, title: 'Discipline', description: 'Self-control and orderly conduct are foundations of success' },
+  { icon: Target, title: 'Innovation', description: 'We embrace creative and modern teaching approaches' },
+  { icon: Eye, title: 'Compassion', description: 'We care deeply about the well-being of our students' }
+]
+</script>
+
+<template>
+  <div>
+    <PageHero
+      title="About Us"
+      subtitle="Discover the story, mission, and values that make Pen Foundation School special"
+      image="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1920&h=600&fit=crop"
+    />
+
+    <!-- Our Story Section -->
+    <section class="section-padding bg-background">
+      <div class="container-custom">
+        <div
+          ref="storyRef"
+          :class="[
+            'grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-700',
+            storyVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          ]"
+        >
+          <div>
+            <p class="text-secondary font-semibold text-sm uppercase tracking-wider mb-2">Our Story</p>
+            <h2 class="text-text-primary mb-6">A Legacy of Educational Excellence</h2>
+
+            <div class="space-y-4 text-text-secondary leading-relaxed">
+              <p>
+                Founded in 2006, Pen Foundation Nursery & Primary School began with a simple yet powerful
+                vision: to provide quality education that nurtures the whole child — academically, morally,
+                and socially.
+              </p>
+              <p>
+                What started as a small nursery school in Ipaye, Ojo, Lagos has grown into a thriving
+                institution serving over 500 students from nursery through primary six. Our growth is
+                a testament to the trust parents have placed in us and our unwavering commitment to
+                excellence.
+              </p>
+              <p>
+                Over the years, we have produced outstanding students who have gone on to excel in
+                prestigious secondary schools across Nigeria. Our alumni continue to make us proud
+                as they pursue higher education and professional careers.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
+              alt="Students learning in classroom"
+              class="rounded-3xl shadow-2xl"
+              loading="lazy"
+            />
+            <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-2xl shadow-xl hidden md:block">
+              <p class="font-display font-bold text-3xl">2006</p>
+              <p class="text-sm">Year Founded</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section-padding bg-primary-dark">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Mission -->
+          <BaseCard padding="lg">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Target class="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-xl text-text-primary mb-3">Our Mission</h3>
+                <p class="text-text-secondary leading-relaxed">
+                  To provide a safe, stimulating, and inclusive learning environment where every child
+                  is empowered to discover their unique potential, develop critical thinking skills,
+                  and build a strong foundation of moral values that will guide them throughout life.
+                </p>
+              </div>
+            </div>
+          </BaseCard>
+
+          <!-- Vision -->
+          <BaseCard padding="lg">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-secondary/20 flex items-center justify-center flex-shrink-0">
+                <Eye class="w-7 h-7 text-secondary-dark" />
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-xl text-text-primary mb-3">Our Vision</h3>
+                <p class="text-text-secondary leading-relaxed">
+                  To be the leading nursery and primary school in Lagos, recognized for producing
+                  well-rounded students who excel academically, demonstrate exemplary character,
+                  and are prepared to become responsible leaders and positive change-makers in society.
+                </p>
+              </div>
+            </div>
+          </BaseCard>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section-padding bg-background">
+      <div class="container-custom">
+        <SectionHeading
+          title="Our Core Values"
+          subtitle="The principles that guide everything we do at Pen Foundation School"
+        />
+
+        <div
+          ref="valuesRef"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <BaseCard
+            v-for="(value, index) in coreValues"
+            :key="value.title"
+            interactive
+            :class="[
+              'text-center transition-all duration-500',
+              valuesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            ]"
+            :style="{ transitionDelay: `${index * 100}ms` }"
+          >
+            <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <component :is="value.icon" class="w-7 h-7 text-primary" />
+            </div>
+            <h3 class="font-display font-bold text-lg text-text-primary mb-2">{{ value.title }}</h3>
+            <p class="text-text-secondary">{{ value.description }}</p>
+          </BaseCard>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proprietor Message Section -->
+    <section class="section-padding bg-primary/5">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-card">
+            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face"
+                alt="Mrs. Adaeze Okonkwo"
+                class="w-32 h-32 rounded-full object-cover border-4 border-secondary flex-shrink-0"
+                loading="lazy"
+              />
+              <div>
+                <blockquote class="text-text-primary text-lg italic leading-relaxed mb-6">
+                  "At Pen Foundation, we believe that every child is a gift with unlimited potential.
+                  Our role is not just to teach, but to inspire, nurture, and guide. We are committed
+                  to creating an environment where children feel loved, valued, and challenged to be
+                  their best. Education is not preparation for life; education is life itself. We
+                  invite you to join our family and experience the Pen Foundation difference."
+                </blockquote>
+                <div>
+                  <p class="font-display font-bold text-text-primary">Mrs. Adaeze Okonkwo</p>
+                  <p class="text-text-secondary">Founder & Proprietress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
