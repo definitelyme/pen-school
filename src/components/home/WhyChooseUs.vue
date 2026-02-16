@@ -6,7 +6,9 @@ import {
   Heart,
   Shield,
   BookOpen,
-  Award
+  Award,
+  Stethoscope,
+  PenTool
 } from 'lucide-vue-next'
 import SectionHeading from '../ui/SectionHeading.vue'
 import BaseCard from '../ui/BaseCard.vue'
@@ -17,12 +19,22 @@ const features = [
   {
     icon: GraduationCap,
     title: 'Quality Education',
-    description: 'Comprehensive curriculum aligned with Nigerian standards, preparing students for academic excellence.'
+    description: 'Comprehensive curriculum aligned with proven international standards, preparing students for academic excellence.'
+  },
+  {
+    icon: PenTool,
+    title: 'Reading & Writing Skills',
+    description: 'We specialize in quickly nurturing young learners to master reading and writing skills. Our proven teaching methods build strong literacy foundations that last a lifetime, giving children confidence in their communication abilities.'
   },
   {
     icon: Users,
     title: 'Experienced Teachers',
     description: 'Dedicated and qualified educators who are passionate about nurturing young minds.'
+  },
+  {
+    icon: Stethoscope,
+    title: 'Health & Wellness',
+    description: 'We partner with Holy Trinity Hospital Igboleri and Adigate Hospital Post Service Estate for comprehensive health care and wellness support for all our pupils and students.'
   },
   {
     icon: Heart,

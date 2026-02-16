@@ -2,19 +2,13 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { Menu, X } from 'lucide-vue-next'
+import { NAV_LINKS, SCHOOL_INFO } from '../../constants'
 
 const route = useRoute()
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 
-const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Staff', path: '/staff' },
-  { name: 'Events', path: '/events' },
-  { name: 'Gallery', path: '/gallery' },
-  { name: 'Contact', path: '/contact' },
-]
+const navLinks = NAV_LINKS
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
@@ -50,50 +44,54 @@ const isActive = (path) => {
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="[
       isScrolled
-        ? 'bg-white/90 backdrop-blur-md shadow-md py-2'
-        : 'bg-transparent py-4'
+        ? 'bg-white shadow-md py-2'
+        : 'bg-white lg:bg-transparent py-2 lg:py-4 shadow-sm lg:shadow-none'
     ]"
   >
     <nav class="container-custom">
       <div class="flex items-center justify-between">
         <!-- Logo -->
-        <RouterLink to="/" class="flex items-center gap-3 group" @click="closeMobileMenu">
+        <RouterLink to="/" class="flex items-center gap-2 group flex-shrink-0" @click="closeMobileMenu">
           <div
-            class="w-12 h-12 rounded-full bg-primary flex items-center justify-center
-                   text-white font-display font-bold text-lg
+            class="w-9 h-9 rounded-full bg-primary flex items-center justify-center
+                   text-white font-display font-bold text-sm
                    shadow-lg group-hover:scale-105 transition-transform"
           >
             PF
           </div>
-          <div class="hidden sm:block">
+          <div class="hidden xl:block">
             <h1
-              class="font-display font-bold text-lg leading-tight"
+              class="font-display font-bold leading-tight whitespace-nowrap"
               :class="isScrolled ? 'text-primary' : 'text-white'"
+              style="font-size: 1.5rem;"
             >
-              Pen Foundation
+              {{ SCHOOL_INFO.name }}
             </h1>
             <p
-              class="text-xs font-medium"
+              class="font-medium whitespace-nowrap"
               :class="isScrolled ? 'text-text-secondary' : 'text-white/80'"
+              style="font-size: 0.8rem;"
             >
-              Quest For Excellence
+              {{ SCHOOL_INFO.motto }}
             </p>
           </div>
         </RouterLink>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center gap-1">
+        <div class="hidden lg:flex items-center gap-1 flex-1 justify-end">
           <RouterLink
             v-for="link in navLinks"
             :key="link.path"
             :to="link.path"
-            class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200"
+            class="px-3 py-2 rounded-lg font-semibold text-sm transition-all duration-200"
             :class="[
               isActive(link.path)
-                ? 'text-primary bg-primary/10'
+                ? isScrolled
+                  ? 'text-white bg-primary shadow-md'
+                  : 'text-primary bg-white shadow-md'
                 : isScrolled
-                  ? 'text-text-primary hover:text-primary hover:bg-primary/5'
-                  : 'text-white hover:bg-white/10'
+                  ? 'text-text-primary hover:text-primary hover:bg-primary/10'
+                  : 'text-white hover:bg-white/20'
             ]"
           >
             {{ link.name }}
@@ -103,8 +101,7 @@ const isActive = (path) => {
         <!-- Mobile Menu Button -->
         <button
           @click="toggleMobileMenu"
-          class="lg:hidden p-2 rounded-lg transition-colors"
-          :class="isScrolled ? 'text-primary hover:bg-primary/10' : 'text-white hover:bg-white/10'"
+          class="lg:hidden p-2 rounded-lg transition-colors text-primary hover:bg-primary/10"
           aria-label="Toggle menu"
         >
           <Menu v-if="!isMobileMenuOpen" class="w-6 h-6" />
@@ -126,7 +123,7 @@ const isActive = (path) => {
     <Transition name="slide">
       <div
         v-if="isMobileMenuOpen"
-        class="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl lg:hidden"
+        class="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl lg:hidden z-50"
       >
         <div class="p-6">
           <!-- Close Button -->
@@ -147,11 +144,11 @@ const isActive = (path) => {
               :key="link.path"
               :to="link.path"
               @click="closeMobileMenu"
-              class="px-4 py-3 rounded-xl font-medium transition-all duration-200"
+              class="px-4 py-3 rounded-xl font-semibold transition-all duration-200"
               :class="[
                 isActive(link.path)
-                  ? 'text-primary bg-primary/10'
-                  : 'text-text-primary hover:text-primary hover:bg-primary/5'
+                  ? 'text-white bg-primary shadow-md'
+                  : 'text-text-primary hover:text-primary hover:bg-primary/10'
               ]"
             >
               {{ link.name }}

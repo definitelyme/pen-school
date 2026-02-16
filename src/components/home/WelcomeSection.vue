@@ -47,14 +47,14 @@ const { elementRef, isVisible } = useScrollReveal()
               Dear Parents and Guardians,
             </p>
             <p>
-              Welcome to Pen Foundation Nursery & Primary School, where we believe every child
-              is uniquely gifted and deserving of an education that nurtures their full potential.
+              Welcome to our school, where we believe every child is uniquely gifted and 
+              deserving of an education that nurtures their full potential.
             </p>
             <p>
-              For nearly two decades, we have been committed to providing a safe, stimulating,
+              For nearly two decades, we've been committed to providing a safe, stimulating,
               and caring environment where children develop academically, socially, and morally.
-              Our dedicated team of educators works tirelessly to ensure that each student receives
-              the attention and guidance they need to thrive.
+              Our dedicated team of educators works tirelessly to ensure each student receives
+              the personalized attention and guidance they need to thrive.
             </p>
             <p>
               At Pen Foundation, we don't just teach — we inspire. We don't just educate — we

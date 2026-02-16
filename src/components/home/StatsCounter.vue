@@ -1,12 +1,13 @@
 <script setup>
 import { useCounter } from '../../composables/useCounter'
 import { Users, Award, Calendar, BookOpen } from 'lucide-vue-next'
+import { SCHOOL_STATS } from '../../constants'
 
 const stats = [
-  { icon: Users, value: 500, suffix: '+', label: 'Happy Students' },
-  { icon: Award, value: 20, suffix: '+', label: 'Qualified Teachers' },
-  { icon: Calendar, value: 19, suffix: '', label: 'Years of Service' },
-  { icon: BookOpen, value: 8, suffix: '', label: 'Class Levels' }
+  { icon: Users, value: SCHOOL_STATS.students, suffix: '+', label: 'Happy Students' },
+  { icon: Award, value: SCHOOL_STATS.teachers, suffix: '', label: 'Qualified Teachers' },
+  { icon: Calendar, value: SCHOOL_STATS.yearsInService, suffix: '+', label: 'Years in Service' },
+  { icon: BookOpen, value: SCHOOL_STATS.nonTeachingStaff, suffix: '', label: 'Non-Teaching Staff' }
 ]
 
 // Create counters for each stat

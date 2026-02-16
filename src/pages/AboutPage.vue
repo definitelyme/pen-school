@@ -4,17 +4,18 @@ import PageHero from '../components/shared/PageHero.vue'
 import SectionHeading from '../components/ui/SectionHeading.vue'
 import BaseCard from '../components/ui/BaseCard.vue'
 import { Target, Eye, Heart, BookOpen, Users, Award } from 'lucide-vue-next'
+import { SCHOOL_INFO, MISSION_VISION, CORE_VALUES } from '../constants'
 
 const { elementRef: storyRef, isVisible: storyVisible } = useScrollReveal()
 const { elementRef: valuesRef, isVisible: valuesVisible } = useScrollReveal()
 
 const coreValues = [
-  { icon: BookOpen, title: 'Excellence', description: 'We strive for the highest standards in everything we do' },
-  { icon: Heart, title: 'Integrity', description: 'Honesty and strong moral principles guide our actions' },
-  { icon: Users, title: 'Respect', description: 'We value every individual and embrace diversity' },
-  { icon: Award, title: 'Discipline', description: 'Self-control and orderly conduct are foundations of success' },
-  { icon: Target, title: 'Innovation', description: 'We embrace creative and modern teaching approaches' },
-  { icon: Eye, title: 'Compassion', description: 'We care deeply about the well-being of our students' }
+  { icon: BookOpen, ...CORE_VALUES[0] },
+  { icon: Heart, ...CORE_VALUES[1] },
+  { icon: Users, ...CORE_VALUES[2] },
+  { icon: Award, ...CORE_VALUES[3] },
+  { icon: Target, ...CORE_VALUES[4] },
+  { icon: Eye, ...CORE_VALUES[5] }
 ]
 </script>
 
@@ -42,20 +43,20 @@ const coreValues = [
 
             <div class="space-y-4 text-text-secondary leading-relaxed">
               <p>
-                Founded in 2006, Pen Foundation Nursery & Primary School began with a simple yet powerful
+                Founded in {{ SCHOOL_INFO.founded }}, our institution began with a simple yet powerful
                 vision: to provide quality education that nurtures the whole child — academically, morally,
                 and socially.
               </p>
               <p>
-                What started as a small nursery school in Ipaye, Ojo, Lagos has grown into a thriving
-                institution serving over 500 students from nursery through primary six. Our growth is
-                a testament to the trust parents have placed in us and our unwavering commitment to
-                excellence.
+                What started as a small nursery school in Ipaye, Ojo, Lagos has blossomed into a thriving
+                educational center serving over 400 students from kindergarten through junior secondary (JSS 3). 
+                This growth reflects the trust parents have placed in us and our unwavering dedication to
+                academic excellence.
               </p>
               <p>
-                Over the years, we have produced outstanding students who have gone on to excel in
-                prestigious secondary schools across Nigeria. Our alumni continue to make us proud
-                as they pursue higher education and professional careers.
+                Through the years, we've produced outstanding students who excel in
+                prestigious secondary schools across the country and beyond. Our alumni make us proud
+                as they pursue higher education and successful professional careers.
               </p>
             </div>
           </div>
@@ -68,7 +69,7 @@ const coreValues = [
               loading="lazy"
             />
             <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-2xl shadow-xl hidden md:block">
-              <p class="font-display font-bold text-3xl">2006</p>
+              <p class="font-display font-bold text-3xl">{{ SCHOOL_INFO.founded }}</p>
               <p class="text-sm">Year Founded</p>
             </div>
           </div>
@@ -89,9 +90,7 @@ const coreValues = [
               <div>
                 <h3 class="font-display font-bold text-xl text-text-primary mb-3">Our Mission</h3>
                 <p class="text-text-secondary leading-relaxed">
-                  To provide a safe, stimulating, and inclusive learning environment where every child
-                  is empowered to discover their unique potential, develop critical thinking skills,
-                  and build a strong foundation of moral values that will guide them throughout life.
+                  {{ MISSION_VISION.mission }}
                 </p>
               </div>
             </div>
@@ -106,9 +105,7 @@ const coreValues = [
               <div>
                 <h3 class="font-display font-bold text-xl text-text-primary mb-3">Our Vision</h3>
                 <p class="text-text-secondary leading-relaxed">
-                  To be the leading nursery and primary school in Lagos, recognized for producing
-                  well-rounded students who excel academically, demonstrate exemplary character,
-                  and are prepared to become responsible leaders and positive change-makers in society.
+                  {{ MISSION_VISION.vision }}
                 </p>
               </div>
             </div>

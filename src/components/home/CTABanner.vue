@@ -2,6 +2,7 @@
 import { useScrollReveal } from '../../composables/useScrollReveal'
 import BaseButton from '../ui/BaseButton.vue'
 import { Phone, Mail } from 'lucide-vue-next'
+import { CONTACT_INFO } from '../../constants'
 
 const { elementRef, isVisible } = useScrollReveal()
 </script>
@@ -29,7 +30,7 @@ const { elementRef, isVisible } = useScrollReveal()
           Ready to Give Your Child the Best Start?
         </h2>
         <p class="text-white/90 text-lg md:text-xl mb-8">
-          Join the Pen Foundation family today. Enroll your child for the 2025/2026 academic session
+          Join the family today. Enroll your child for the 2026/2027 academic session
           and watch them grow into confident, capable learners.
         </p>
 
@@ -38,7 +39,7 @@ const { elementRef, isVisible } = useScrollReveal()
             Start Enrollment
           </BaseButton>
           <BaseButton
-            href="tel:+2348012345678"
+            :href="CONTACT_INFO.phone.href"
             variant="outline"
             size="lg"
             class="!border-white !text-white hover:!bg-white hover:!text-primary"
@@ -50,13 +51,13 @@ const { elementRef, isVisible } = useScrollReveal()
 
         <!-- Contact Info -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/80">
-          <a href="tel:+2348012345678" class="flex items-center gap-2 hover:text-secondary transition-colors">
+          <a :href="CONTACT_INFO.phone.href" class="flex items-center gap-2 hover:text-secondary transition-colors">
             <Phone class="w-5 h-5" />
-            <span>+234 801 234 5678</span>
+            <span>{{ CONTACT_INFO.phone.formatted }}</span>
           </a>
-          <a href="mailto:info@penfoundationschool.com" class="flex items-center gap-2 hover:text-secondary transition-colors">
+          <a :href="CONTACT_INFO.email.admissionsHref" class="flex items-center gap-2 hover:text-secondary transition-colors">
             <Mail class="w-5 h-5" />
-            <span>info@penfoundationschool.com</span>
+            <span>{{ CONTACT_INFO.email.admissions }}</span>
           </a>
         </div>
       </div>

@@ -4,6 +4,7 @@ import PageHero from '../components/shared/PageHero.vue'
 import ContactForm from '../components/shared/ContactForm.vue'
 import BaseCard from '../components/ui/BaseCard.vue'
 import { MapPin, Phone, Mail, Clock } from 'lucide-vue-next'
+import { CONTACT_INFO } from '../constants'
 
 const { elementRef, isVisible } = useScrollReveal()
 
@@ -11,25 +12,25 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Address',
-    content: 'Iba Housing Estate Ojo, by Ipaye Bustop, Lagos, Nigeria',
-    link: 'https://maps.google.com/?q=Ipaye+Ojo+Lagos+Nigeria'
+    content: CONTACT_INFO.address.full,
+    link: CONTACT_INFO.mapUrl
   },
   {
     icon: Phone,
     title: 'Phone',
-    content: '+234 801 234 5678',
-    link: 'tel:+2348012345678'
+    content: CONTACT_INFO.phone.formatted,
+    link: CONTACT_INFO.phone.href
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'info@penfoundationschool.com',
-    link: 'mailto:info@penfoundationschool.com'
+    content: CONTACT_INFO.email.primary,
+    link: CONTACT_INFO.email.href
   },
   {
     icon: Clock,
     title: 'Office Hours',
-    content: 'Mon - Fri: 7:30 AM - 4:00 PM',
+    content: CONTACT_INFO.officeHours,
     link: null
   }
 ]
@@ -113,19 +114,19 @@ const handleFormSubmit = (formData) => {
             </BaseCard>
 
             <!-- Additional Info -->
-            <BaseCard class="bg-primary text-white">
-              <h3 class="font-display font-bold text-xl mb-3">Visit Our School</h3>
+            <div class="bg-primary text-white p-6 rounded-2xl shadow-card">
+              <h3 class="font-display font-bold text-xl text-white mb-3">Visit Our School</h3>
               <p class="text-white/90 mb-4">
                 We welcome prospective parents to visit our campus and see firsthand
-                the Pen Foundation difference. Schedule a tour today!
+                how we nurture young minds. Schedule a tour today!
               </p>
               <div class="flex items-center gap-2 text-secondary">
                 <Phone class="w-5 h-5" />
-                <a href="tel:+2348012345678" class="font-semibold hover:underline">
-                  +234 801 234 5678
+                <a :href="CONTACT_INFO.phone.href" class="font-semibold hover:underline text-secondary">
+                  {{ CONTACT_INFO.phone.formatted }}
                 </a>
               </div>
-            </BaseCard>
+            </div>
           </div>
         </div>
       </div>

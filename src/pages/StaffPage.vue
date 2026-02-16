@@ -3,11 +3,12 @@ import { useScrollReveal } from '../composables/useScrollReveal'
 import { staffData } from '../data/staffData'
 import PageHero from '../components/shared/PageHero.vue'
 import SectionHeading from '../components/ui/SectionHeading.vue'
-import BaseCard from '../components/ui/BaseCard.vue'
+import StaffCard from '../components/ui/StaffCard.vue'
 
-const { elementRef: leadershipRef, isVisible: leadershipVisible } = useScrollReveal()
-const { elementRef: teachingRef, isVisible: teachingVisible } = useScrollReveal()
-const { elementRef: supportRef, isVisible: supportVisible } = useScrollReveal()
+const { elementRef: proprietressRef, isVisible: proprietressVisible } = useScrollReveal()
+const { elementRef: directorsRef, isVisible: directorsVisible } = useScrollReveal()
+const { elementRef: managementRef, isVisible: managementVisible } = useScrollReveal()
+const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollReveal()
 </script>
 
 <template>
@@ -18,127 +19,135 @@ const { elementRef: supportRef, isVisible: supportVisible } = useScrollReveal()
       image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&h=600&fit=crop"
     />
 
-    <!-- Leadership Section -->
+    <!-- Proprietress Section -->
     <section class="section-padding bg-background">
       <div class="container-custom">
         <SectionHeading
-          title="School Leadership"
-          subtitle="Experienced leaders guiding our school towards excellence"
+          title="Proprietress / Head Teacher"
+          subtitle="Leading with vision and dedication"
         />
 
         <div
-          ref="leadershipRef"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          ref="proprietressRef"
+          class="max-w-2xl mx-auto"
         >
-          <BaseCard
-            v-for="(staff, index) in staffData.leadership"
+          <div
+            v-for="(staff, index) in staffData.proprietress"
             :key="staff.id"
-            interactive
-            padding="none"
             :class="[
-              'overflow-hidden transition-all duration-500',
-              leadershipVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              'transition-all duration-500',
+              proprietressVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             ]"
-            :style="{ transitionDelay: `${index * 100}ms` }"
           >
-            <div class="aspect-square overflow-hidden">
-              <img
-                :src="staff.image"
-                :alt="staff.name"
-                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <div class="p-6 text-center">
-              <h3 class="font-display font-bold text-lg text-text-primary mb-1">
-                {{ staff.name }}
-              </h3>
-              <p class="text-primary font-medium text-sm mb-2">{{ staff.role }}</p>
-              <p class="text-text-secondary text-sm">{{ staff.bio }}</p>
-            </div>
-          </BaseCard>
+            <StaffCard :staff="staff" variant="large" :show-phone="false" />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Teaching Staff Section -->
+    <!-- Directors Section -->
     <section class="section-padding bg-primary/5">
       <div class="container-custom">
         <SectionHeading
-          title="Teaching Staff"
-          subtitle="Passionate educators dedicated to nurturing every student"
+          title="Board of Directors"
+          subtitle="Strategic leadership and governance"
         />
 
         <div
-          ref="teachingRef"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          ref="directorsRef"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          <BaseCard
-            v-for="(staff, index) in staffData.teaching"
+          <div
+            v-for="(staff, index) in staffData.directors"
             :key="staff.id"
-            interactive
-            padding="none"
             :class="[
-              'overflow-hidden transition-all duration-500',
-              teachingVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              'transition-all duration-500',
+              directorsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             ]"
-            :style="{ transitionDelay: `${index * 75}ms` }"
+            :style="{ transitionDelay: `${index * 100}ms` }"
           >
-            <div class="p-6 text-center">
-              <img
-                :src="staff.image"
-                :alt="staff.name"
-                class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-secondary"
-                loading="lazy"
-              />
-              <h3 class="font-display font-bold text-text-primary mb-1">
-                {{ staff.name }}
-              </h3>
-              <p class="text-primary font-medium text-sm mb-2">{{ staff.role }}</p>
-              <p class="text-text-secondary text-sm">{{ staff.bio }}</p>
-            </div>
-          </BaseCard>
+            <StaffCard :staff="staff" border-color="border-primary" />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Support Staff Section -->
+    <!-- Management Staff Section -->
     <section class="section-padding bg-background">
       <div class="container-custom">
         <SectionHeading
-          title="Support Staff"
-          subtitle="Ensuring a safe, healthy, and conducive learning environment"
+          title="Management Staff"
+          subtitle="Ensuring smooth operations and student welfare"
         />
 
         <div
-          ref="supportRef"
-          class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          ref="managementRef"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          <BaseCard
-            v-for="(staff, index) in staffData.support"
+          <div
+            v-for="(staff, index) in staffData.management"
             :key="staff.id"
-            interactive
-            padding="none"
             :class="[
-              'overflow-hidden transition-all duration-500',
-              supportVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              'transition-all duration-500',
+              managementVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             ]"
             :style="{ transitionDelay: `${index * 100}ms` }"
           >
-            <div class="p-6 text-center">
-              <img
-                :src="staff.image"
-                :alt="staff.name"
-                class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-primary"
-                loading="lazy"
-              />
-              <h3 class="font-display font-bold text-text-primary mb-1">
-                {{ staff.name }}
-              </h3>
-              <p class="text-primary font-medium text-sm mb-2">{{ staff.role }}</p>
-              <p class="text-text-secondary text-sm">{{ staff.bio }}</p>
+            <StaffCard :staff="staff" border-color="border-secondary" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultants Section -->
+    <section class="section-padding bg-primary/5">
+      <div class="container-custom">
+        <SectionHeading
+          title="School Consultants & Coordinators"
+          subtitle="Expert guidance and coordination"
+        />
+
+        <div
+          ref="consultantsRef"
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto"
+        >
+          <div
+            v-for="(staff, index) in staffData.consultants"
+            :key="staff.id"
+            :class="[
+              'transition-all duration-500',
+              consultantsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            ]"
+            :style="{ transitionDelay: `${index * 100}ms` }"
+          >
+            <StaffCard :staff="staff" border-color="border-primary" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Info Section -->
+    <section class="section-padding bg-background">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-text-primary mb-4">Our Dedicated Team</h2>
+          <p class="text-text-secondary text-lg leading-relaxed mb-8">
+            Beyond our leadership team, we have a dedicated group of qualified teachers 
+            and support staff who work tirelessly to ensure every child receives the 
+            best education and care. Our team includes experienced educators across all 
+            class levels, as well as support staff who maintain a safe, clean, and 
+            conducive learning environment.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            <div class="bg-white p-6 rounded-2xl shadow-card">
+              <p class="text-4xl font-display font-bold text-primary mb-2">25</p>
+              <p class="text-text-secondary">Qualified Teachers</p>
             </div>
-          </BaseCard>
+            <div class="bg-white p-6 rounded-2xl shadow-card">
+              <p class="text-4xl font-display font-bold text-primary mb-2">10</p>
+              <p class="text-text-secondary">Support Staff</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -149,10 +158,10 @@ const { elementRef: supportRef, isVisible: supportVisible } = useScrollReveal()
         <h2 class="text-primary-dark mb-4">Join Our Team</h2>
         <p class="text-primary-dark/80 text-lg mb-6 max-w-2xl mx-auto">
           Are you passionate about education? We're always looking for dedicated
-          teachers and staff to join our family.
+          teachers and support staff to join our family.
         </p>
         <a
-          href="mailto:careers@penfoundationschool.com"
+          href="mailto:info@penschoolsgroup.sch.ng"
           class="btn-primary inline-block"
         >
           Send Your CV

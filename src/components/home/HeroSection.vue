@@ -46,18 +46,10 @@ const scrollToContent = () => {
 
     <!-- Content -->
     <div class="relative z-10 container-custom text-center py-20">
-      <!-- Enrollment Badge -->
-      <div class="inline-block mb-6 animate-fade-in">
-        <BaseBadge variant="secondary" size="lg">
-          Now Enrolling for 2025/2026 Session
-        </BaseBadge>
-      </div>
-
       <!-- Main Heading -->
       <h1 class="text-white mb-6 leading-tight animate-fade-up" style="animation-delay: 0.1s">
         Welcome to<br />
-        <span class="text-secondary">Pen Foundation School</span><br />
-        Nursery, Primary and College
+        <span class="text-secondary">Pen Foundation School</span>
       </h1>
 
       <!-- Tagline -->
@@ -77,21 +69,21 @@ const scrollToContent = () => {
       </div>
 
       <!-- Stats Preview -->
-      <div class="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto animate-fade-up" style="animation-delay: 0.4s">
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto animate-fade-up" style="animation-delay: 0.4s">
         <div class="text-center">
-          <p class="text-3xl md:text-4xl font-display font-bold text-white">350+</p>
+          <p class="text-3xl md:text-4xl font-display font-bold text-white">400+</p>
           <p class="text-white/70 text-sm">Happy Students</p>
         </div>
         <div class="text-center">
-          <p class="text-3xl md:text-4xl font-display font-bold text-white">20+</p>
+          <p class="text-3xl md:text-4xl font-display font-bold text-white">25</p>
           <p class="text-white/70 text-sm">Teaching Staffs</p>
         </div>
         <div class="text-center">
-          <p class="text-3xl md:text-4xl font-display font-bold text-white">6</p>
+          <p class="text-3xl md:text-4xl font-display font-bold text-white">10</p>
           <p class="text-white/70 text-sm">Support Staffs</p>
         </div>
         <div class="text-center">
-          <p class="text-3xl md:text-4xl font-display font-bold text-white">20</p>
+          <p class="text-3xl md:text-4xl font-display font-bold text-white">19+</p>
           <p class="text-white/70 text-sm">Years of Excellence</p>
         </div>
       </div>
