@@ -1,29 +1,28 @@
 export const staffData = {
-  proprietress: [
-    {
-      id: 1,
-      name: 'Mrs. Adaeze Okonkwo',
-      role: 'Proprietress / Head Teacher',
-      bio: 'Over 25 years of experience in early childhood education',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face',
-      phone: null
-    }
-  ],
+  proprietress: {
+    id: 1,
+    name: 'Mrs. Christy Hillary',
+    role: 'Proprietress / Head Teacher',
+    bio: 'Over 13 years of experience in early childhood education',
+    headshot: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507987/v3_0479890_0078087_0570737_xiefuy.jpg",
+    image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771510492/headshotmaster260219_1250_21_tnohd7.webp',
+    phone: null,
+  },
   directors: [
     {
       id: 2,
       name: 'Brian Chukwujekwu',
       role: 'Director',
       bio: 'Strategic leadership and educational development',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-      phone: '+234 816 922 392'
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507691/chuchu-office_bjq7iw.jpg',
+      phone: '+234 810 039 5180'
     },
     {
       id: 3,
       name: 'Judith Chinenye',
       role: 'Director',
       bio: 'Committed to excellence in education',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507613/chinenye-good_wbcyk0.jpg',
       phone: null
     },
     {
@@ -31,7 +30,7 @@ export const staffData = {
       name: 'Brendan Chukwunonso',
       role: 'Director',
       bio: 'Focused on innovation and growth',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507613/bren_yfkrpc.jpg',
       phone: null
     },
     {
@@ -39,25 +38,25 @@ export const staffData = {
       name: 'Augustus Chukwudi',
       role: 'Director',
       bio: 'Dedicated to quality education',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507695/chuks-good_d3ijdy.jpg',
       phone: null
     }
   ],
   management: [
     {
       id: 6,
-      name: 'Christy Hillary',
+      name: 'Mrs. Christy Hillary',
       role: 'Management Staff',
       bio: 'Experienced in school administration',
-      image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop&crop=face',
+      image: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507987/v3_0479890_0078087_0570737_xiefuy.jpg",
       phone: '+234 703 947 5429'
     },
     {
       id: 7,
-      name: 'Peace Uzoatu',
+      name: 'Mrs. Peace Uzoatu',
       role: 'Management Staff',
       bio: 'Dedicated to student welfare and support',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507883/v3_0105829_anknr8.jpg',
       phone: '+234 818 797 8777'
     },
     {
@@ -65,25 +64,25 @@ export const staffData = {
       name: 'Dr. Mrs. Ugoji',
       role: 'Management Staff',
       bio: 'Expert in educational psychology',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771510263/v3_0776628_0295664_0942075_oyksnw.jpg',
       phone: '+234 803 394 4775'
     },
     {
       id: 9,
-      name: 'Theresa Udogu',
+      name: 'Mrs. Theresa Udogu',
       role: 'Management Staff',
       bio: 'Committed to operational excellence',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771510249/v3_0689535_0590810_0523312_ejfwi7.jpg',
       phone: '+234 902 882 8751'
     }
   ],
   consultants: [
     {
       id: 10,
-      name: 'Anne Nwokoye-Ejike',
-      role: 'School Consultant & Coordinator',
-      bio: 'Educational consultant with extensive experience',
-      image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face',
+      name: 'Mrs. Anne Nwokoye-Ejike',
+      role: 'Educational Supervisor',
+      bio: 'Educational supervisor with extensive experience in supporting children in learning and mentoring teachers',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771509638/mum-gen-2_chwlnn.jpg',
       phone: '+234 803 324 5077'
     },
     {
@@ -91,8 +90,8 @@ export const staffData = {
       name: 'Brian Chukwujekwu',
       role: 'School Coordinator',
       bio: 'Strategic planning and coordination',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-      phone: '+234 816 922 392'
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507700/chuchu-original_lbbtpv.jpg',
+      phone: '+234 810 039 5180'
     }
   ],
   teaching: [
@@ -191,7 +190,7 @@ export const staffData = {
 
 export const getAllStaff = () => {
   return [
-    ...staffData.proprietress,
+    staffData.proprietress,
     ...staffData.directors,
     ...staffData.management,
     ...staffData.consultants,

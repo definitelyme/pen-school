@@ -5,8 +5,8 @@ import { eventsData } from '../data/eventsData'
 import PageHero from '../components/shared/PageHero.vue'
 import BaseCard from '../components/ui/BaseCard.vue'
 import BaseBadge from '../components/ui/BaseBadge.vue'
-import LightboxModal from '../components/ui/LightboxModal.vue'
-import { Calendar, Play } from 'lucide-vue-next'
+import EventDetailModal from '../components/events/EventDetailModal.vue'
+import { Calendar, Play, Image as ImageIcon } from 'lucide-vue-next'
 
 const { elementRef, isVisible } = useScrollReveal()
 
@@ -24,18 +24,18 @@ const filteredEvents = computed(() => {
 })
 
 const showModal = ref(false)
-const activeVideo = ref(null)
+const activeEvent = ref(null)
 
-const playVideo = (event) => {
-  if (event.hasVideo) {
-    activeVideo.value = event
+const openEventDetail = (event) => {
+  if (event.gallery || event.videoPlaylist) {
+    activeEvent.value = event
     showModal.value = true
   }
 }
 
 const closeModal = () => {
   showModal.value = false
-  activeVideo.value = null
+  activeEvent.value = null
 }
 </script>
 
@@ -77,10 +77,11 @@ const closeModal = () => {
             interactive
             padding="none"
             :class="[
-              'overflow-hidden transition-all duration-500',
+              'overflow-hidden transition-all duration-500 cursor-pointer',
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             ]"
             :style="{ transitionDelay: `${index * 100}ms` }"
+            @click="openEventDetail(event)"
           >
             <!-- Event Image -->
             <div class="relative h-52 overflow-hidden">
@@ -98,16 +99,23 @@ const closeModal = () => {
                 </BaseBadge>
               </div>
 
-              <!-- Video Play Button -->
-              <button
-                v-if="event.hasVideo"
-                @click.stop="playVideo(event)"
-                class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 hover:opacity-100 transition-opacity"
-              >
-                <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
-                  <Play class="w-7 h-7 text-primary fill-primary ml-1" />
+              <!-- Media Indicators -->
+              <div class="absolute bottom-4 right-4 flex gap-2">
+                <div
+                  v-if="event.gallery && event.gallery.length > 0"
+                  class="px-3 py-1.5 rounded-full bg-black/70 text-white text-xs font-semibold flex items-center gap-1"
+                >
+                  <ImageIcon class="w-3 h-3" />
+                  {{ event.gallery.length }}
                 </div>
-              </button>
+                <div
+                  v-if="event.videoPlaylist && event.videoPlaylist.length > 0"
+                  class="px-3 py-1.5 rounded-full bg-black/70 text-white text-xs font-semibold flex items-center gap-1"
+                >
+                  <Play class="w-3 h-3" />
+                  {{ event.videoPlaylist.length }}
+                </div>
+              </div>
             </div>
 
             <!-- Event Content -->
@@ -115,18 +123,22 @@ const closeModal = () => {
               <div class="flex items-center gap-2 text-text-secondary text-sm mb-3">
                 <Calendar class="w-4 h-4" />
                 <span>{{ event.dateDisplay }}</span>
-                <span v-if="event.hasVideo" class="ml-auto text-primary font-medium text-xs">
-                  Video Available
-                </span>
               </div>
 
               <h3 class="font-display font-bold text-lg text-text-primary mb-3">
                 {{ event.title }}
               </h3>
 
-              <p class="text-text-secondary text-sm leading-relaxed">
+              <p class="text-text-secondary text-sm leading-relaxed line-clamp-3">
                 {{ event.description }}
               </p>
+
+              <button
+                v-if="event.gallery || event.videoPlaylist"
+                class="mt-4 text-primary font-semibold text-sm hover:underline"
+              >
+                View Gallery & Videos →
+              </button>
             </div>
           </BaseCard>
         </div>
@@ -141,12 +153,10 @@ const closeModal = () => {
       </div>
     </section>
 
-    <!-- Video Modal -->
-    <LightboxModal
+    <!-- Event Detail Modal -->
+    <EventDetailModal
       :show="showModal"
-      video-mode
-      :video-url="activeVideo?.videoUrl"
-      :video-title="activeVideo?.videoTitle"
+      :event="activeEvent"
       @close="closeModal"
     />
   </div>

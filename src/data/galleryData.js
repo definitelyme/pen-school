@@ -1,98 +1,64 @@
-export const galleryPhotos = [
+// Auto-updated from Cloudinary on 2026-02-19T23:09:54.794Z
+
+export const galleryData = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop',
-    alt: 'Students learning in classroom',
-    caption: 'Interactive classroom learning'
+    url: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_600,q_auto,w_800/IMG_20240802_170517_052_hjlilj?_a=BAMAOGP/0',
+    thumbnail: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_300,q_auto,w_400/IMG_20240802_170517_052_hjlilj?_a=BAMAOGP/0',
+    category: 'Activities',
+    alt: 'School activities'
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&h=600&fit=crop',
-    alt: 'Children playing on playground',
-    caption: 'Fun times at the playground'
+    url: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_600,q_auto,w_800/IMG_20230707_101948_ea7xhe?_a=BAMAOGP/0',
+    thumbnail: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_300,q_auto,w_400/IMG_20230707_101948_ea7xhe?_a=BAMAOGP/0',
+    category: 'Activities',
+    alt: 'School activities'
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop',
-    alt: 'School assembly',
-    caption: 'Morning assembly gathering'
+    url: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_600,q_auto,w_800/IMG_20240524_100153_208_z0fslu?_a=BAMAOGP/0',
+    thumbnail: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_300,q_auto,w_400/IMG_20240524_100153_208_z0fslu?_a=BAMAOGP/0',
+    category: 'Activities',
+    alt: 'School activities'
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=600&fit=crop',
-    alt: 'School building exterior',
-    caption: 'Our beautiful school premises'
+    url: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_600,q_auto,w_800/514025150_23915347334793804_554305396500455224_n_gffpva?_a=BAMAOGP/0',
+    thumbnail: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_300,q_auto,w_400/514025150_23915347334793804_554305396500455224_n_gffpva?_a=BAMAOGP/0',
+    category: 'Activities',
+    alt: 'School activities'
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&h=600&fit=crop',
-    alt: 'Students in library',
-    caption: 'Reading time in the library'
+    url: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_600,q_auto,w_800/513630250_23915345268127344_2221431099363552421_n_abdipm?_a=BAMAOGP/0',
+    thumbnail: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_300,q_auto,w_400/513630250_23915345268127344_2221431099363552421_n_abdipm?_a=BAMAOGP/0',
+    category: 'Activities',
+    alt: 'School activities'
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1564429238067-5ba6a9f8fc30?w=800&h=600&fit=crop',
-    alt: 'Art class activities',
-    caption: 'Creative arts session'
+    url: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_600,q_auto,w_800/513642309_23915347294793808_8814259010121631819_n_ls8hlh?_a=BAMAOGP/0',
+    thumbnail: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_300,q_auto,w_400/513642309_23915347294793808_8814259010121631819_n_ls8hlh?_a=BAMAOGP/0',
+    category: 'Activities',
+    alt: 'School activities'
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=800&h=600&fit=crop',
-    alt: 'Students in science class',
-    caption: 'Hands-on science experiments'
+    url: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_600,q_auto,w_800/512712102_23915347434793794_1796761315638286033_n_w2r1ql?_a=BAMAOGP/0',
+    thumbnail: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_300,q_auto,w_400/512712102_23915347434793794_1796761315638286033_n_w2r1ql?_a=BAMAOGP/0',
+    category: 'Activities',
+    alt: 'School activities'
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=500&fit=crop',
-    alt: 'Sports day activities',
-    caption: 'Inter-house sports competition'
-  },
-  {
-    id: 9,
-    src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop',
-    alt: 'Graduation ceremony',
-    caption: 'Primary 6 graduation day'
-  },
-  {
-    id: 10,
-    src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop',
-    alt: 'Cultural day celebration',
-    caption: 'Celebrating Nigerian heritage'
-  },
-  {
-    id: 11,
-    src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&h=600&fit=crop',
-    alt: 'Students in computer class',
-    caption: 'Learning computer skills'
-  },
-  {
-    id: 12,
-    src: 'https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=800&h=600&fit=crop',
-    alt: 'Music class',
-    caption: 'Music and rhythm lessons'
-  },
-  {
-    id: 13,
-    src: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&h=600&fit=crop',
-    alt: 'Group study session',
-    caption: 'Collaborative learning'
-  },
-  {
-    id: 14,
-    src: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=600&fit=crop',
-    alt: 'Teacher with students',
-    caption: 'Caring teachers, happy students'
-  },
-  {
-    id: 15,
-    src: 'https://images.unsplash.com/photo-1529390079861-591f381e5693?w=800&h=600&fit=crop',
-    alt: 'Students eating lunch',
-    caption: 'Lunch break with friends'
-  },
-  {
-    id: 16,
-    src: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&h=600&fit=crop',
-    alt: 'Parent-teacher meeting',
-    caption: 'PTA meeting in session'
+    url: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_600,q_auto,w_800/511330586_23915345264794011_1826525302396903002_n_jrhcjb?_a=BAMAOGP/0',
+    thumbnail: 'https://res.cloudinary.com/dlpk3eltq/image/upload/c_fill,f_auto,h_300,q_auto,w_400/511330586_23915345264794011_1826525302396903002_n_jrhcjb?_a=BAMAOGP/0',
+    category: 'Activities',
+    alt: 'School activities'
   }
 ]
+
+export const getGalleryByCategory = (category) => {
+  return galleryData.filter(item => item.category === category)
+}

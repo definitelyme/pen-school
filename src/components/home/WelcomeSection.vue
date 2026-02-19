@@ -1,6 +1,7 @@
 <script setup>
-import { useScrollReveal } from '../../composables/useScrollReveal'
-import BaseButton from '../ui/BaseButton.vue'
+import { useScrollReveal } from '../../composables/useScrollReveal';
+import { staffData } from '../../data/staffData';
+import BaseButton from '../ui/BaseButton.vue';
 
 const { elementRef, isVisible } = useScrollReveal()
 </script>
@@ -20,8 +21,8 @@ const { elementRef, isVisible } = useScrollReveal()
         <div class="relative">
           <div class="relative rounded-3xl overflow-hidden shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop&crop=face"
-              alt="Mrs. Adaeze Okonkwo - Head Teacher"
+              :src="staffData.proprietress.image"
+              :alt="`${staffData.proprietress.name} - Head Teacher`"
               class="w-full h-auto object-cover"
               loading="lazy"
             />
@@ -57,7 +58,7 @@ const { elementRef, isVisible } = useScrollReveal()
               the personalized attention and guidance they need to thrive.
             </p>
             <p>
-              At Pen Foundation, we don't just teach — we inspire. We don't just educate — we
+              At Pen Foundation School, we don't just teach — we inspire. We don't just educate — we
               build character. Our motto, <strong>"Quest For Excellence,"</strong> guides
               everything we do.
             </p>
@@ -65,12 +66,12 @@ const { elementRef, isVisible } = useScrollReveal()
 
           <div class="flex items-center gap-4 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face"
-              alt="Mrs. Adaeze Okonkwo"
+              :src="staffData.proprietress.headshot"
+              :alt="`${staffData.proprietress.name} - Head Teacher`"
               class="w-16 h-16 rounded-full object-cover border-4 border-secondary"
             />
             <div>
-              <p class="font-display font-bold text-text-primary">Mrs. Adaeze Okonkwo</p>
+              <p class="font-display font-bold text-text-primary"> {{ staffData.proprietress.name }} </p>
               <p class="text-text-secondary text-sm">Proprietress / Head Teacher</p>
             </div>
           </div>

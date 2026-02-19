@@ -6,9 +6,7 @@
 // School Information
 export const SCHOOL_INFO = {
   name: 'Pen Foundation School',
-  fullName: 'Pen Foundation Nursery & Primary School',
-  footerSchName: 'Pen Foundation',
-  footerSchNameOther: 'Nursery & Primary',
+  fullName: 'Pen Foundation Nursery, Primary & College',
   motto: 'Quest For Excellence',
   tagline: 'Where Every Child Shines',
   founded: 'August 2006',
@@ -25,9 +23,9 @@ export const CONTACT_INFO = {
     full: 'Iba Housing Estate Ojo, by Ipaye Bustop, Lagos, Nigeria'
   },
   phone: {
-    primary: '+234 816 922 392',
-    formatted: '+234 816 922 392',
-    href: 'tel:+2348169223392'
+    primary: '+234 810 039 5180',
+    formatted: '+234 810 039 5180',
+    href: 'tel:+2348100395180'
   },
   email: {
     primary: 'info@penschoolsgroup.sch.ng',
@@ -87,7 +85,7 @@ export const CLASS_LEVELS = {
   college: {
     name: 'College (Junior Secondary)',
     classes: ['JSS 1', 'JSS 2', 'JSS 3'],
-    ageRange: '12-15 years'
+    ageRange: '10-13 years'
   }
 }
 

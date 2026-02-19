@@ -1,7 +1,9 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import NavBar from './components/layout/NavBar.vue'
+import { Analytics } from '@vercel/analytics/vue'
+import { SpeedInsights } from "@vercel/speed-insights/vue"
+import { onMounted, onUnmounted, ref } from 'vue'
 import AppFooter from './components/layout/AppFooter.vue'
+import NavBar from './components/layout/NavBar.vue'
 import ScrollToTop from './components/layout/ScrollToTop.vue'
 
 const showScrollTop = ref(false)
@@ -36,5 +38,8 @@ onUnmounted(() => {
     <Transition name="fade">
       <ScrollToTop v-if="showScrollTop" />
     </Transition>
+
+    <Analytics />
+    <SpeedInsights />
   </div>
 </template>

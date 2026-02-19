@@ -276,6 +276,13 @@ p {
   overflow: hidden;
 }
 
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* Glass effect */
 .glass {
   background-color: rgba(255, 255, 255, 0.8);

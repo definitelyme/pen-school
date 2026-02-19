@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'robots.txt'],
       manifest: {
-        name: 'Pen Foundation Nursery & Primary School',
+        name: 'Pen Foundation Nursery, Primary & College',
         short_name: 'Pen School',
-        description: 'Quest For Excellence - A premier nursery and primary school in Lagos, Nigeria',
+        description: 'Quest For Excellence - A nursery, primary and college in Ojo, Lagos, Nigeria',
         theme_color: '#2D6A4F',
         background_color: '#FFF8F0',
         display: 'standalone',
@@ -63,6 +63,20 @@ export default defineConfig({
               expiration: {
                 maxEntries: 10,
                 maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
+          {
+            urlPattern: /^https:\/\/res\.cloudinary\.com\/.*/i,
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'cloudinary-images-cache',
+              expiration: {
+                maxEntries: 200,
+                maxAgeSeconds: 60 * 60 * 24 * 90 // 90 days
               },
               cacheableResponse: {
                 statuses: [0, 200]

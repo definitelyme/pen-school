@@ -1,10 +1,11 @@
 <script setup>
-import { useScrollReveal } from '../composables/useScrollReveal'
+import { Award, BookOpen, Eye, Heart, Target, Users } from 'lucide-vue-next'
 import PageHero from '../components/shared/PageHero.vue'
-import SectionHeading from '../components/ui/SectionHeading.vue'
 import BaseCard from '../components/ui/BaseCard.vue'
-import { Target, Eye, Heart, BookOpen, Users, Award } from 'lucide-vue-next'
-import { SCHOOL_INFO, MISSION_VISION, CORE_VALUES } from '../constants'
+import SectionHeading from '../components/ui/SectionHeading.vue'
+import { useScrollReveal } from '../composables/useScrollReveal'
+import { staffData } from '../data/staffData'
+import { CORE_VALUES, MISSION_VISION, SCHOOL_INFO } from '../constants'
 
 const { elementRef: storyRef, isVisible: storyVisible } = useScrollReveal()
 const { elementRef: valuesRef, isVisible: valuesVisible } = useScrollReveal()
@@ -153,22 +154,22 @@ const coreValues = [
           <div class="bg-white rounded-3xl p-8 md:p-12 shadow-card">
             <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face"
-                alt="Mrs. Adaeze Okonkwo"
+                :src="staffData.proprietress.headshot"
+                :alt="`${staffData.proprietress.name} - Head Teacher`"
                 class="w-32 h-32 rounded-full object-cover border-4 border-secondary flex-shrink-0"
                 loading="lazy"
               />
               <div>
                 <blockquote class="text-text-primary text-lg italic leading-relaxed mb-6">
-                  "At Pen Foundation, we believe that every child is a gift with unlimited potential.
+                  "At Pen Foundation School, we believe that every child is a gift with unlimited potential.
                   Our role is not just to teach, but to inspire, nurture, and guide. We are committed
                   to creating an environment where children feel loved, valued, and challenged to be
                   their best. Education is not preparation for life; education is life itself. We
-                  invite you to join our family and experience the Pen Foundation difference."
+                  invite you to join our family and experience the difference."
                 </blockquote>
                 <div>
-                  <p class="font-display font-bold text-text-primary">Mrs. Adaeze Okonkwo</p>
-                  <p class="text-text-secondary">Founder & Proprietress</p>
+                  <p class="font-display font-bold text-text-primary"> {{ staffData.proprietress.name }} </p>
+                  <p class="text-text-secondary">Proprietress / Head Teacher</p>
                 </div>
               </div>
             </div>

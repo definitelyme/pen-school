@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useScrollReveal } from '../composables/useScrollReveal'
-import { galleryPhotos } from '../data/galleryData'
+import { galleryData as galleryPhotos } from '../data/galleryData'
 import { videosData } from '../data/videosData'
 import PageHero from '../components/shared/PageHero.vue'
 import VideoCard from '../components/ui/VideoCard.vue'
@@ -108,14 +108,15 @@ const closeVideoModal = () => {
           >
             <div class="relative overflow-hidden rounded-2xl shadow-card">
               <img
-                :src="photo.src"
+                :src="photo.thumbnail || photo.url"
                 :alt="photo.alt"
                 class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
+                @error="(e) => console.error('Gallery image error:', e.target.src)"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div class="absolute bottom-0 left-0 right-0 p-4">
-                  <p class="text-white text-sm font-medium">{{ photo.caption }}</p>
+                  <p class="text-white text-sm font-medium">{{ photo.caption || photo.category }}</p>
                 </div>
               </div>
             </div>

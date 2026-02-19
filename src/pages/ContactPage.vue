@@ -1,9 +1,9 @@
 <script setup>
-import { useScrollReveal } from '../composables/useScrollReveal'
-import PageHero from '../components/shared/PageHero.vue'
+import { Clock, Mail, MapPin, Phone } from 'lucide-vue-next'
 import ContactForm from '../components/shared/ContactForm.vue'
+import PageHero from '../components/shared/PageHero.vue'
 import BaseCard from '../components/ui/BaseCard.vue'
-import { MapPin, Phone, Mail, Clock } from 'lucide-vue-next'
+import { useScrollReveal } from '../composables/useScrollReveal'
 import { CONTACT_INFO } from '../constants'
 
 const { elementRef, isVisible } = useScrollReveal()
@@ -117,7 +117,7 @@ const handleFormSubmit = (formData) => {
             <div class="bg-primary text-white p-6 rounded-2xl shadow-card">
               <h3 class="font-display font-bold text-xl text-white mb-3">Visit Our School</h3>
               <p class="text-white/90 mb-4">
-                We welcome prospective parents to visit our campus and see firsthand
+                We welcome prospective parents to visit and see firsthand
                 how we nurture young minds. Schedule a tour today!
               </p>
               <div class="flex items-center gap-2 text-secondary">

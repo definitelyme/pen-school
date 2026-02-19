@@ -148,17 +148,18 @@ onUnmounted(() => {
             <!-- Image -->
             <img
               v-if="images[activeIndex]"
-              :src="images[activeIndex].src"
+              :src="images[activeIndex].url || images[activeIndex].src"
               :alt="images[activeIndex].alt || ''"
               class="w-full h-auto max-h-[80vh] object-contain rounded-xl"
+              @error="(e) => console.error('Lightbox image error:', e.target.src)"
             />
 
             <!-- Caption -->
             <p
-              v-if="images[activeIndex]?.caption"
+              v-if="images[activeIndex]?.caption || images[activeIndex]?.category"
               class="text-white text-center mt-4 font-medium"
             >
-              {{ images[activeIndex].caption }}
+              {{ images[activeIndex].caption || images[activeIndex].category }}
             </p>
 
             <!-- Counter -->

@@ -94,21 +94,13 @@ onUnmounted(() => {
                 </blockquote>
 
                 <!-- Author -->
-                <div class="flex items-center justify-center gap-4">
-                  <img
-                    :src="testimonial.image"
-                    :alt="testimonial.name"
-                    class="w-14 h-14 rounded-full object-cover border-4 border-secondary"
-                    loading="lazy"
-                  />
-                  <div class="text-left">
-                    <p class="font-display font-bold text-text-primary">
-                      {{ testimonial.name }}
-                    </p>
-                    <p class="text-text-secondary text-sm">
-                      {{ testimonial.childClass }}
-                    </p>
-                  </div>
+                <div class="text-center">
+                  <p class="font-display font-bold text-text-primary text-lg">
+                    {{ testimonial.name }}
+                  </p>
+                  <p class="text-text-secondary text-sm">
+                    {{ testimonial.childClass }}
+                  </p>
                 </div>
               </div>
             </div>

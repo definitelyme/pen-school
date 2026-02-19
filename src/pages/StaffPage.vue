@@ -5,7 +5,6 @@ import PageHero from '../components/shared/PageHero.vue'
 import SectionHeading from '../components/ui/SectionHeading.vue'
 import StaffCard from '../components/ui/StaffCard.vue'
 
-const { elementRef: proprietressRef, isVisible: proprietressVisible } = useScrollReveal()
 const { elementRef: directorsRef, isVisible: directorsVisible } = useScrollReveal()
 const { elementRef: managementRef, isVisible: managementVisible } = useScrollReveal()
 const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollReveal()
@@ -19,34 +18,8 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
       image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&h=600&fit=crop"
     />
 
-    <!-- Proprietress Section -->
-    <section class="section-padding bg-background">
-      <div class="container-custom">
-        <SectionHeading
-          title="Proprietress / Head Teacher"
-          subtitle="Leading with vision and dedication"
-        />
-
-        <div
-          ref="proprietressRef"
-          class="max-w-2xl mx-auto"
-        >
-          <div
-            v-for="(staff, index) in staffData.proprietress"
-            :key="staff.id"
-            :class="[
-              'transition-all duration-500',
-              proprietressVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            ]"
-          >
-            <StaffCard :staff="staff" variant="large" :show-phone="false" />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Directors Section -->
-    <section class="section-padding bg-primary/5">
+    <section class="section-padding bg-background">
       <div class="container-custom">
         <SectionHeading
           title="Board of Directors"
@@ -103,8 +76,8 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
     <section class="section-padding bg-primary/5">
       <div class="container-custom">
         <SectionHeading
-          title="School Consultants & Coordinators"
-          subtitle="Expert guidance and coordination"
+          title="Expert Guidance and Coordination"
+          subtitle="Providing strategic oversight and professional consultation"
         />
 
         <div

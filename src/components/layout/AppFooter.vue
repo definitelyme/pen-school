@@ -23,8 +23,8 @@ const socialLinks = [
               PF
             </div>
             <div>
-              <h3 class="font-display font-bold text-xl">{{ SCHOOL_INFO.footerSchName }}</h3>
-              <p class="text-sm text-white/70">{{ SCHOOL_INFO.footerSchNameOther }}</p>
+              <h3 class="font-display font-bold text-xl">{{ SCHOOL_INFO.name }}</h3>
+              <p class="text-sm text-white/70">Nursery, Primary & College</p>
             </div>
           </div>
           <p class="text-white/80 mb-6 max-w-md leading-relaxed">

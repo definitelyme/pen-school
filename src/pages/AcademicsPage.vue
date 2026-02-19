@@ -117,8 +117,9 @@ const classLevels = [
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <BaseCard interactive>
             <h3 class="font-display font-bold text-lg text-text-primary mb-2">Core Subjects</h3>
-            <p class="text-text-secondary">
-              Mathematics, English Language, Basic Science, Social Studies, and more aligned with the Nigerian curriculum.
+            <p class="text-text-secondary text-sm leading-relaxed">
+              English Language, Mathematics, Quantitative/Verbal Reasoning, Basic Science, Basic Technology, 
+              French, Phonics, Civic Education, Social Studies, Security Education, and History.
             </p>
           </BaseCard>
 
