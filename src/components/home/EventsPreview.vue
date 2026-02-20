@@ -16,7 +16,7 @@ const events = getRecentEvents(3)
     <div class="container-custom">
       <SectionHeading
         title="Upcoming Events & News"
-        subtitle="Stay updated with the latest happenings at Pen Foundation School"
+        subtitle="Stay updated with the latest happenings"
       />
 
       <div

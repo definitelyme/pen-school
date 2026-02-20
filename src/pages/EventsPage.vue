@@ -43,7 +43,7 @@ const closeModal = () => {
   <div>
     <PageHero
       title="Events & News"
-      subtitle="Stay connected with the latest happenings at Pen Foundation School"
+      subtitle="Stay connected with the latest happenings"
       image="https://res.cloudinary.com/dlpk3eltq/image/upload/v1771548700/IMG-20260220-WA0011_uiljy5.jpg"
     />
 
