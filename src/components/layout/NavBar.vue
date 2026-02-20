@@ -52,12 +52,12 @@ const isActive = (path) => {
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center gap-2 group flex-shrink-0" @click="closeMobileMenu">
-          <div
-            class="w-9 h-9 rounded-full bg-primary flex items-center justify-center
-                   text-white font-display font-bold text-sm
-                   shadow-lg group-hover:scale-105 transition-transform"
-          >
-            PF
+          <div class="w-10 h-10 rounded-full bg-white p-1 shadow-md group-hover:scale-105 transition-transform flex-shrink-0">
+            <img
+              src="/logo.png"
+              alt="Pen Foundation School"
+              class="w-full h-full object-contain"
+            />
           </div>
           <div class="hidden xl:block">
             <h1

@@ -3,9 +3,9 @@
 /* Custom Theme for Tailwind v4 */
 @theme {
   /* Colors */
-  --color-primary: #2D6A4F;
-  --color-primary-light: #40916C;
-  --color-primary-dark: #1B4332;
+  --color-primary: #0C7BB3;
+  --color-primary-light: #1798D2;
+  --color-primary-dark: #085A84;
   --color-secondary: #F4A261;
   --color-secondary-light: #F6BD7A;
   --color-secondary-dark: #E76F51;
@@ -22,7 +22,7 @@
   /* Shadows */
   --shadow-card: 0 2px 12px rgba(0,0,0,0.06);
   --shadow-card-hover: 0 8px 24px rgba(0,0,0,0.12);
-  --shadow-button: 0 4px 14px rgba(45, 106, 79, 0.3);
+  --shadow-button: 0 4px 14px rgba(12, 123, 179, 0.3);
 
   /* Animations */
   --animate-fade-up: fade-up 0.6s ease-out forwards;

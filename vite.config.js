@@ -8,12 +8,12 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'robots.txt'],
+      includeAssets: ['favicon.png', 'robots.txt'],
       manifest: {
         name: 'Pen Foundation Nursery, Primary & College',
         short_name: 'Pen School',
         description: 'Quest For Excellence - A nursery, primary and college in Ojo, Lagos, Nigeria',
-        theme_color: '#2D6A4F',
+        theme_color: '#1798D2',
         background_color: '#FFF8F0',
         display: 'standalone',
         orientation: 'portrait',
@@ -21,19 +21,19 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: '/icons/icon-192x192.svg',
+            src: '/icons/icon-192x192.png',
             sizes: '192x192',
-            type: 'image/svg+xml'
+            type: 'image/png'
           },
           {
-            src: '/icons/icon-512x512.svg',
+            src: '/icons/icon-512x512.png',
             sizes: '512x512',
-            type: 'image/svg+xml'
+            type: 'image/png'
           },
           {
-            src: '/icons/icon-512x512.svg',
+            src: '/icons/icon-512x512.png',
             sizes: '512x512',
-            type: 'image/svg+xml',
+            type: 'image/png',
             purpose: 'maskable'
           }
         ]

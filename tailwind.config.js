@@ -8,9 +8,9 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2D6A4F',
-          light: '#40916C',
-          dark: '#1B4332',
+          DEFAULT: '#0C7BB3',
+          light: '#1798D2',
+          dark: '#085A84',
         },
         secondary: {
           DEFAULT: '#F4A261',
@@ -38,7 +38,7 @@ export default {
       boxShadow: {
         'card': '0 2px 12px rgba(0,0,0,0.06)',
         'card-hover': '0 8px 24px rgba(0,0,0,0.12)',
-        'button': '0 4px 14px rgba(45, 106, 79, 0.3)',
+        'button': '0 4px 14px rgba(12, 123, 179, 0.3)',
       },
       animation: {
         'fade-up': 'fadeUp 0.6s ease-out forwards',

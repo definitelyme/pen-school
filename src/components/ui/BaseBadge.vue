@@ -19,7 +19,7 @@ const variantClasses = computed(() => {
     primary: 'bg-primary/10 text-primary',
     secondary: 'bg-secondary/20 text-secondary-dark',
     accent: 'bg-accent/10 text-accent',
-    success: 'bg-green-100 text-green-700',
+    success: 'bg-blue-100 text-blue-700',
     warning: 'bg-amber-100 text-amber-700'
   }
   return variants[props.variant]

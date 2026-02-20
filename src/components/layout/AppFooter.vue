@@ -19,8 +19,12 @@ const socialLinks = [
         <!-- School Info -->
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary font-display font-bold text-lg">
-              PF
+            <div class="w-12 h-12 rounded-full bg-white p-1.5 shadow-md flex-shrink-0">
+              <img
+                src="/logo.png"
+                alt="Pen Foundation School"
+                class="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h3 class="font-display font-bold text-xl">{{ SCHOOL_INFO.name }}</h3>

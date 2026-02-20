@@ -105,14 +105,14 @@ const handleSubmit = async () => {
     <Transition name="fade">
       <div
         v-if="isSubmitted"
-        class="bg-green-50 border border-green-200 rounded-xl p-4 flex items-center gap-3"
+        class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center gap-3"
       >
-        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-          <Check class="w-5 h-5 text-green-600" />
+        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+          <Check class="w-5 h-5 text-blue-600" />
         </div>
         <div>
-          <p class="font-semibold text-green-800">Message Sent Successfully!</p>
-          <p class="text-sm text-green-600">We'll get back to you as soon as possible.</p>
+          <p class="font-semibold text-blue-800">Message Sent Successfully!</p>
+          <p class="text-sm text-blue-600">We'll get back to you as soon as possible.</p>
         </div>
       </div>
     </Transition>
