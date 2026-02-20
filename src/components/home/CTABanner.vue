@@ -12,7 +12,7 @@ const { elementRef, isVisible } = useScrollReveal()
     <!-- Background Image -->
     <div
       class="absolute inset-0 bg-cover bg-center bg-fixed"
-      style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1920&h=600&fit=crop')"
+      style="background-image: url('https://res.cloudinary.com/dlpk3eltq/image/upload/v1771548558/IMG-20260219-WA0002_hpugti.jpg')"
     />
 
     <!-- Gradient Overlay -->

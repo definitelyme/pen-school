@@ -44,7 +44,7 @@ const closeModal = () => {
     <PageHero
       title="Events & News"
       subtitle="Stay connected with the latest happenings at Pen Foundation School"
-      image="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1920&h=600&fit=crop"
+      image="https://res.cloudinary.com/dlpk3eltq/image/upload/v1771548700/IMG-20260220-WA0011_uiljy5.jpg"
     />
 
     <section class="section-padding bg-background">

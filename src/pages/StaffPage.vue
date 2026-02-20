@@ -15,7 +15,7 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
     <PageHero
       title="Our Staff"
       subtitle="Meet the dedicated team of educators shaping young minds at Pen Foundation"
-      image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&h=600&fit=crop"
+      image="https://res.cloudinary.com/dlpk3eltq/image/upload/v1771548068/IMG-20260216-WA0022_aen8o9.jpg"
     />
 
     <!-- Directors Section -->

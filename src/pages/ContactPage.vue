@@ -45,7 +45,7 @@ const handleFormSubmit = (formData) => {
     <PageHero
       title="Contact Us"
       subtitle="Get in touch with us for inquiries, enrollment, or to schedule a visit"
-      image="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1920&h=600&fit=crop"
+      image="https://res.cloudinary.com/dlpk3eltq/image/upload/v1771513418/IMG_20240701_094725_225_cy2xei.jpg"
     />
 
     <section class="section-padding bg-background">
