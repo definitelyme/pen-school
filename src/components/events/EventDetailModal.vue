@@ -36,7 +36,10 @@ const playVideo = (index) => {
   activeTab.value = 'videos'
   nextTick(() => {
     if (videoPlayer.value) {
-      videoPlayer.value.play().catch(() => {})
+      videoPlayer.value.load()
+      videoPlayer.value.play().catch(() => {
+        // Mobile may block autoplay — native controls will still work
+      })
     }
   })
 }
@@ -243,6 +246,8 @@ watch(() => props.show, (newVal) => {
                 <video
                   ref="videoPlayer"
                   :key="event.videoPlaylist[currentVideoIndex].url"
+                  :src="event.videoPlaylist[currentVideoIndex].url"
+                  type="video/mp4"
                   controls
                   playsinline
                   webkit-playsinline
@@ -250,10 +255,7 @@ watch(() => props.show, (newVal) => {
                   class="w-full h-full"
                   style="object-fit: contain;"
                   @error="(e) => console.error('Video error:', e)"
-                >
-                  <source :src="event.videoPlaylist[currentVideoIndex].url" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                />
               </div>
               <div class="mt-3">
                 <h3 class="font-display font-bold text-base md:text-lg text-text-primary">
