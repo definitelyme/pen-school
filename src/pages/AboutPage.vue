@@ -169,7 +169,7 @@ const coreValues = [
                 </blockquote>
                 <div>
                   <p class="font-display font-bold text-text-primary"> {{ staffData.proprietress.name }} </p>
-                  <p class="text-text-secondary">Proprietress / Head Teacher</p>
+                  <p class="text-text-secondary">Principal / Manager</p>
                 </div>
               </div>
             </div>

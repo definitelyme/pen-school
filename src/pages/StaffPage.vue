@@ -28,7 +28,7 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
 
         <div
           ref="directorsRef"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6"
         >
           <div
             v-for="(staff, index) in staffData.directors"
@@ -39,7 +39,7 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
             ]"
             :style="{ transitionDelay: `${index * 100}ms` }"
           >
-            <StaffCard :staff="staff" border-color="border-primary" />
+            <StaffCard :staff="staff" variant="large" border-color="border-primary" />
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ export const staffData = {
   proprietress: {
     id: 1,
     name: 'Mrs. Christy Hillary',
-    role: 'Proprietress / Head Teacher',
+    role: 'Principal / Manager',
     bio: 'Over 13 years of experience in early childhood education',
     headshot: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507987/v3_0479890_0078087_0570737_xiefuy.jpg",
     image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771510492/headshotmaster260219_1250_21_tnohd7.webp',

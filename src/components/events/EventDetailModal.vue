@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { X, ChevronLeft, ChevronRight, Play } from 'lucide-vue-next'
 
 const props = defineProps({
@@ -14,6 +14,7 @@ const currentImageIndex = ref(0)
 const currentVideoIndex = ref(0)
 const isPlayingVideo = ref(false)
 const isFullscreenImage = ref(false)
+const videoPlayer = ref(null)
 
 const nextImage = () => {
   if (props.event?.gallery) {
@@ -33,6 +34,11 @@ const playVideo = (index) => {
   currentVideoIndex.value = index
   isPlayingVideo.value = true
   activeTab.value = 'videos'
+  nextTick(() => {
+    if (videoPlayer.value) {
+      videoPlayer.value.play().catch(() => {})
+    }
+  })
 }
 
 const closeModal = () => {
@@ -235,11 +241,12 @@ watch(() => props.show, (newVal) => {
             <div v-if="isPlayingVideo" class="mb-4">
               <div class="bg-black rounded-2xl overflow-hidden relative" style="height: calc(95vh - 320px); min-height: 400px; max-height: 700px;">
                 <video
+                  ref="videoPlayer"
                   :key="event.videoPlaylist[currentVideoIndex].url"
-                  :src="event.videoPlaylist[currentVideoIndex].url"
                   controls
-                  autoplay
                   playsinline
+                  webkit-playsinline
+                  preload="auto"
                   class="w-full h-full"
                   style="object-fit: contain;"
                   @error="(e) => console.error('Video error:', e)"

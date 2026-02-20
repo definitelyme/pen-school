@@ -72,7 +72,7 @@ const { elementRef, isVisible } = useScrollReveal()
             />
             <div>
               <p class="font-display font-bold text-text-primary"> {{ staffData.proprietress.name }} </p>
-              <p class="text-text-secondary text-sm">Proprietress / Head Teacher</p>
+              <p class="text-text-secondary text-sm">Principal / Manager</p>
             </div>
           </div>
 
