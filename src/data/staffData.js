@@ -1,11 +1,11 @@
 export const staffData = {
   proprietress: {
     id: 1,
-    name: 'Mrs. Christy Hillary',
-    role: 'Principal / Manager',
+    name: 'Mrs. Peace Uzoatu',
+    role: 'Head Teacher / Manager',
     bio: 'Over 13 years of experience in early childhood education',
-    headshot: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507987/v3_0479890_0078087_0570737_xiefuy.jpg",
-    image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771510492/headshotmaster260219_1250_21_tnohd7.webp',
+    headshot: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1772309677/hilary-heaedshot_brnudh.jpg",
+    image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1772306844/IMG-20260223-WA0014_roqsri.webp',
     phone: null,
   },
   directors: [
@@ -48,7 +48,7 @@ export const staffData = {
       name: 'Mrs. Christy Hillary',
       role: 'Management Staff',
       bio: 'Experienced in school administration',
-      image: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507987/v3_0479890_0078087_0570737_xiefuy.jpg",
+      image: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1772307731/peace-uzoatu-office-1_djt96t.webp",
       phone: '+234 703 947 5429'
     },
     {
@@ -56,7 +56,7 @@ export const staffData = {
       name: 'Mrs. Peace Uzoatu',
       role: 'Management Staff',
       bio: 'Dedicated to student welfare and support',
-      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771507883/v3_0105829_anknr8.jpg',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1772309677/hilary-heaedshot_brnudh.jpg',
       phone: '+234 818 797 8777'
     },
     {
@@ -72,7 +72,7 @@ export const staffData = {
       name: 'Mrs. Theresa Udogu',
       role: 'Management Staff',
       bio: 'Committed to operational excellence',
-      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771510249/v3_0689535_0590810_0523312_ejfwi7.jpg',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1772308671/theresa_wfw5wr.jpg',
       phone: '+234 902 882 8751'
     }
   ],
