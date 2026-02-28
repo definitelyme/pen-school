@@ -41,7 +41,9 @@ export const CONTACT_INFO = {
 
 // Social Media Links
 export const SOCIAL_LINKS = {
+  // facebook: 'https://www.facebook.com/PenFoundationSchool',
   facebook: '#',
+  // instagram: 'https://www.instagram.com/penfoundationschool?igsh=dWM0cXJ4MmhjMjZl',
   instagram: '#',
   twitter: '#'
 }
