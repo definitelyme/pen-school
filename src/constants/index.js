@@ -36,7 +36,7 @@ export const CONTACT_INFO = {
     academicHref: 'mailto:academicaffairs@penschoolsgroup.sch.ng'
   },
   officeHours: 'Mon - Fri: 7:30 AM - 4:00 PM',
-  mapUrl: 'https://maps.google.com/?q=Ipaye+Ojo+Lagos+Nigeria'
+  mapUrl: 'https://maps.app.goo.gl/zMAV3omcWdrLEmvUA'
 }
 
 // Social Media Links

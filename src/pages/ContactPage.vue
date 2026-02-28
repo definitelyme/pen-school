@@ -101,7 +101,7 @@ const handleFormSubmit = (formData) => {
             <BaseCard padding="none" class="overflow-hidden">
               <div class="aspect-video">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.3073619999997!2d3.1833329!3d6.4686111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b879d0a6e7f1b%3A0x5e5e5e5e5e5e5e5e!2sOjo%2C%20Lagos!5e0!3m2!1sen!2sng!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1363.782833290214!2d3.1988312205184193!3d6.492928865737052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8422b01bff35%3A0x10426847fa3ca70b!2sPen%20Foundation%20Nursery%20And%20Primary%20School!5e0!3m2!1sen!2sng!4v1772310840195!5m2!1sen!2sng"
                   width="100%"
                   height="100%"
                   style="border:0;"
