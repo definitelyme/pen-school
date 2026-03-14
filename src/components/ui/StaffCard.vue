@@ -22,8 +22,8 @@ defineProps({
   },
   imageSize: {
     type: String,
-    default: 'default', // 'default' (96px), 'large' (128px), 'xlarge' (160px)
-    validator: (value) => ['default', 'large', 'xlarge'].includes(value)
+    default: 'default', // 'small' (64px), 'default' (96px), 'large' (128px), 'xlarge' (160px)
+    validator: (value) => ['small', 'default', 'large', 'xlarge'].includes(value)
   }
 })
 </script>
@@ -93,9 +93,11 @@ defineProps({
           :class="[
             'rounded-full object-cover mx-auto mb-4 border-4',
             borderColor,
-            variant === 'compact' ? 'w-20 h-20' : 
+            variant === 'compact' && imageSize === 'small' ? 'w-16 h-16' :
+            variant === 'compact' ? 'w-20 h-20' :
             imageSize === 'xlarge' ? 'w-40 h-40' :
-            imageSize === 'large' ? 'w-32 h-32' : 'w-24 h-24'
+            imageSize === 'large' ? 'w-32 h-32' :
+            imageSize === 'small' ? 'w-16 h-16' : 'w-24 h-24'
           ]"
           loading="lazy"
         />

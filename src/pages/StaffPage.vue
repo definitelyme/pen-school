@@ -18,33 +18,6 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
       image="https://res.cloudinary.com/dlpk3eltq/image/upload/v1771548068/IMG-20260216-WA0022_aen8o9.jpg"
     />
 
-    <!-- Directors Section -->
-    <section class="section-padding bg-background">
-      <div class="container-custom">
-        <SectionHeading
-          title="Board of Directors"
-          subtitle="Strategic leadership and governance"
-        />
-
-        <div
-          ref="directorsRef"
-          class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6"
-        >
-          <div
-            v-for="(staff, index) in staffData.directors"
-            :key="staff.id"
-            :class="[
-              'transition-all duration-500',
-              directorsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            ]"
-            :style="{ transitionDelay: `${index * 100}ms` }"
-          >
-            <StaffCard :staff="staff" variant="large" border-color="border-primary" />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Management Staff Section -->
     <section class="section-padding bg-background">
       <div class="container-custom">
@@ -55,7 +28,7 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
 
         <div
           ref="managementRef"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6"
         >
           <div
             v-for="(staff, index) in staffData.management"
@@ -66,7 +39,34 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
             ]"
             :style="{ transitionDelay: `${index * 100}ms` }"
           >
-            <StaffCard :staff="staff" border-color="border-secondary" />
+            <StaffCard :staff="staff" variant="large" border-color="border-secondary" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Board of Directors Section -->
+    <section class="section-padding bg-background">
+      <div class="container-custom">
+        <SectionHeading
+          title="Board of Directors"
+          subtitle="Strategic leadership and governance"
+        />
+
+        <div
+          ref="directorsRef"
+          class="grid grid-cols-2 md:grid-cols-4 gap-4"
+        >
+          <div
+            v-for="(staff, index) in staffData.directors"
+            :key="staff.id"
+            :class="[
+              'transition-all duration-500',
+              directorsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            ]"
+            :style="{ transitionDelay: `${index * 100}ms` }"
+          >
+            <StaffCard :staff="staff" variant="compact" image-size="small" border-color="border-primary" />
           </div>
         </div>
       </div>

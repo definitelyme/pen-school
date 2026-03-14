@@ -1,8 +1,8 @@
 export const staffData = {
   proprietress: {
     id: 1,
-    name: 'Mrs. Peace Uzoatu',
-    role: 'Head Teacher / Manager',
+    name: 'Mrs. Hilary Christy',
+    role: 'Principal / Manager',
     bio: 'Over 13 years of experience in early childhood education',
     headshot: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1772309677/hilary-heaedshot_brnudh.jpg",
     image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1772306844/IMG-20260223-WA0014_roqsri.webp',
@@ -45,32 +45,32 @@ export const staffData = {
   management: [
     {
       id: 6,
-      name: 'Mrs. Christy Hillary',
-      role: 'Management Staff',
+      name: 'Mrs. Hillary Christy',
+      role: 'Principal / Manager',
       bio: 'Experienced in school administration',
-      image: "https://res.cloudinary.com/dlpk3eltq/image/upload/v1772307731/peace-uzoatu-office-1_djt96t.webp",
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1772309677/hilary-heaedshot_brnudh.jpg',
       phone: '+234 703 947 5429'
     },
     {
       id: 7,
       name: 'Mrs. Peace Uzoatu',
-      role: 'Management Staff',
+      role: 'Assistant Head-Teacher / Admin',
       bio: 'Dedicated to student welfare and support',
-      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1772309677/hilary-heaedshot_brnudh.jpg',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1772307731/peace-uzoatu-office-1_djt96t.webp',
       phone: '+234 818 797 8777'
     },
     {
       id: 8,
       name: 'Dr. Mrs. Ugoji',
       role: 'Management Staff',
-      bio: 'Expert in educational psychology',
-      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771510263/v3_0776628_0295664_0942075_oyksnw.jpg',
+      bio: 'Curriculum coordinator & Classroom supervisor',
+      image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1773506642/Ugoji-headshot_ycrfcz.jpg',
       phone: '+234 803 394 4775'
     },
     {
       id: 9,
       name: 'Mrs. Theresa Udogu',
-      role: 'Management Staff',
+      role: 'Head of Department, Post Service Annex',
       bio: 'Committed to operational excellence',
       image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1772308671/theresa_wfw5wr.jpg',
       phone: '+234 902 882 8751'
@@ -80,7 +80,7 @@ export const staffData = {
     {
       id: 10,
       name: 'Mrs. Anne Nwokoye-Ejike',
-      role: 'Educational Supervisor',
+      role: 'Board Member, Academic Matters.',
       bio: 'Educational supervisor with extensive experience in supporting children in learning and mentoring teachers',
       image: 'https://res.cloudinary.com/dlpk3eltq/image/upload/v1771509638/mum-gen-2_chwlnn.jpg',
       phone: '+234 803 324 5077'

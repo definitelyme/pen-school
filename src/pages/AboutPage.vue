@@ -62,14 +62,14 @@ const coreValues = [
             </div>
           </div>
 
-          <div class="relative">
+          <div class="relative hidden md:block">
             <img
               src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
               alt="Students learning in classroom"
               class="rounded-3xl shadow-2xl"
               loading="lazy"
             />
-            <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-2xl shadow-xl hidden md:block">
+            <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-2xl shadow-xl">
               <p class="font-display font-bold text-3xl">{{ SCHOOL_INFO.founded }}</p>
               <p class="text-sm">Year Founded</p>
             </div>
