@@ -1,13 +1,16 @@
 <script setup>
-import { useScrollReveal } from '../composables/useScrollReveal'
-import { staffData } from '../data/staffData'
 import PageHero from '../components/shared/PageHero.vue'
 import SectionHeading from '../components/ui/SectionHeading.vue'
 import StaffCard from '../components/ui/StaffCard.vue'
+import { useScrollReveal } from '../composables/useScrollReveal'
+import { staffData } from '../data/staffData'
 
 const { elementRef: directorsRef, isVisible: directorsVisible } = useScrollReveal()
 const { elementRef: managementRef, isVisible: managementVisible } = useScrollReveal()
 const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollReveal()
+
+// Temporarily hidden
+const showBoardOfDirectors = false
 </script>
 
 <template>
@@ -45,8 +48,8 @@ const { elementRef: consultantsRef, isVisible: consultantsVisible } = useScrollR
       </div>
     </section>
 
-    <!-- Board of Directors Section -->
-    <section class="section-padding bg-background">
+    <!-- Board of Directors Section (temporarily hidden) -->
+    <section v-if="showBoardOfDirectors" class="section-padding bg-background">
       <div class="container-custom">
         <SectionHeading
           title="Board of Directors"
